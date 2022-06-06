@@ -8,7 +8,10 @@ resource "azurerm_mysql_server" "db_server" {
   name                = "${var.prefix}-mysqlserver"
   location            = azurerm_resource_group.rgrp.location
   resource_group_name = azurerm_resource_group.rgrp.name
-
+  depends_on = [
+    azurerm_virtual_network.vnet,
+    azurerm_subnet.private
+  ]
   administrator_login          = "mysqladminun"
   administrator_login_password = "H@Sh1CoR3!"
 
