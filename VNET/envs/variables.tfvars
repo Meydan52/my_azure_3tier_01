@@ -1,2 +1,2 @@
 rgrp_name = "project3tier"
-region = "West Europe"
+region    = "West Europe"

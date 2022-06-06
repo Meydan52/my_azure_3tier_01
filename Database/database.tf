@@ -31,7 +31,7 @@ resource "azurerm_mysql_database" "create_database" {
   server_name         = azurerm_mysql_server.db_server.name
   charset             = "utf8"
   collation           = "utf8_unicode_ci"
-} 
+}
 
 resource "azurerm_mysql_virtual_network_rule" "database_subnet" {
   name                = "mysql-vnet-rule"
